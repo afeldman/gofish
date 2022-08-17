@@ -6,6 +6,7 @@ require (
 	github.com/BurntSushi/toml v1.2.0 // indirect
 	github.com/Masterminds/semver v1.5.0
 	github.com/Masterminds/vcs v1.13.3
+	github.com/afeldman/go-util v0.2.2
 	github.com/bacongobbler/browser v1.1.0
 	github.com/fatih/color v1.13.0 // indirect
 	github.com/gosuri/uitable v0.0.4
