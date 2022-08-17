@@ -5,24 +5,24 @@ import (
 	"path"
 	"path/filepath"
 
-	"github.com/fishworks/gofish/pkg/lazypath"
+	"github.com/afeldman/go-util/filesystem"
 )
 
 // DefaultHomeEnvVar defines the environment variable used to look up the home directory.
 const DefaultHomeEnvVar = "GOFISH_HOME"
 
 var (
-	homepath = lazypath.LazyPath{
+	homepath = filesystem.LazyPath{
 		EnvironmentVariable: DefaultHomeEnvVar,
 		DefaultFn:           defaultHome,
 	}
 
-	userpath = lazypath.LazyPath{
+	userpath = filesystem.LazyPath{
 		EnvironmentVariable: "HOME",
 		DefaultFn:           defaultUserHome,
 	}
 
-	binpath = lazypath.LazyPath{
+	binpath = filesystem.LazyPath{
 		EnvironmentVariable: "GOFISH_BINPATH",
 		DefaultFn:           defaultBinPath,
 	}

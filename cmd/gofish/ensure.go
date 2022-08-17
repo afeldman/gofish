@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/fishworks/gofish/pkg/ohai"
+	"github.com/fishworks/gofish/pkg/ahoi"
 )
 
 // ensureFood checks to see if the default fish food exists.
@@ -9,10 +9,10 @@ import (
 // If the pack does not exist, this function will create it.
 // If it does, it will update to the latest.
 func ensureFood() error {
-	ohai.Ohailn("Installing default fish food...")
+	ahoi.Ohailn("Installing default fish food...")
 
 	addArgs := []string{
-		"https://github.com/fishworks/fish-food",
+		"https://github.com/afeldman/fish-food",
 	}
 
 	rigCmd, _, err := rootCmd.Find([]string{"rig", "add"})

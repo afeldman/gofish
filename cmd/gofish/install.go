@@ -11,11 +11,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/fishworks/gofish/receipt"
-
-	"github.com/fishworks/gofish"
-	"github.com/fishworks/gofish/pkg/home"
-	"github.com/fishworks/gofish/pkg/ohai"
+	"github.com/afeldman/gofish/pkg/ahoi"
+	"github.com/afeldman/gofish/pkg/home"
+	"github.com/afeldman/gofish/receipt"
+	"github.com/afeldmann/gofish"
 	"github.com/spf13/cobra"
 	"github.com/yuin/gluamapper"
 	lua "github.com/yuin/gopher-lua"
@@ -57,10 +56,10 @@ func newInstallCmd() *cobra.Command {
 					return err
 				}
 				if len(findFoodVersions(fishFood)) > 0 {
-					ohai.Ohaif("%s is already installed. Please use `gofish upgrade %s` to upgrade.\n", fishFood, fishFood)
+					ahoi.Ohaif("%s is already installed. Please use `gofish upgrade %s` to upgrade.\n", fishFood, fishFood)
 					return nil
 				}
-				ohai.Ohaif("Installing %s...\n", fishFood)
+				ahoi.Ohaif("Installing %s...\n", fishFood)
 				start := time.Now()
 				if err := food.Install(); err != nil {
 					if errors.Is(err, gofish.ErrCouldNotUnlink{}) {
@@ -72,7 +71,7 @@ func newInstallCmd() *cobra.Command {
 					}
 				}
 				t := time.Now()
-				ohai.Successf("%s %s: installed in %s\n", food.Name, food.Version, t.Sub(start).String())
+				ahoi.Successf("%s %s: installed in %s\n", food.Name, food.Version, t.Sub(start).String())
 			}
 			return nil
 		},
@@ -109,7 +108,7 @@ func getFood(foodName string) (*gofish.Food, error) {
 			rig = installReceipt.Rig
 		}
 	} else if !os.IsNotExist(err) {
-		ohai.Warningf("could not read from install receipt: %v", err)
+		ahoi.Warningf("could not read from install receipt: %v", err)
 	}
 
 	l := lua.NewState()

@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/fishworks/gofish/pkg/home"
+	"github.com/afeldman/gofish/pkg/home"
 )
 
 var _ Installer = new(LocalInstaller)

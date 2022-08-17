@@ -1,4 +1,4 @@
-package ohai
+package ahoi
 
 import (
 	"fmt"
