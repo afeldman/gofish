@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/afeldman/gofish"
+	"github.com/afeldman/gofish/gofish"
 	"github.com/afeldman/gofish/pkg/ahoi"
 	"github.com/spf13/cobra"
 	"github.com/yuin/gluamapper"

@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 	"path/filepath"
 
-	"github.com/afeldman/gofish"
+	"github.com/afeldman/gofish/gofish"
 	"github.com/afeldman/gofish/pkg/home"
 	"github.com/gosuri/uitable"
 	"github.com/spf13/cobra"

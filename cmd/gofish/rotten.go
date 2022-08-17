@@ -3,7 +3,7 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/afeldman/gofish"
+	"github.com/afeldman/gofish/gofish"
 	"github.com/gosuri/uitable"
 	"github.com/spf13/cobra"
 )

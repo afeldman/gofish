@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/afeldman/gofish"
+	"github.com/afeldman/gofish/gofish"
 	"github.com/afeldman/gofish/pkg/ahoi"
 	"github.com/afeldman/gofish/pkg/home"
 	"github.com/afeldman/gofish/receipt"
