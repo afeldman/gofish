@@ -4,7 +4,10 @@ import (
 	"os"
 
 	cmd "github.com/afeldman/gofish/cmd/gofish"
+	"github.com/spf13/cobra"
 )
+
+var rootCmd *cobra.Command
 
 func main() {
 	rootCmd = cmd.NewRootCmd()
