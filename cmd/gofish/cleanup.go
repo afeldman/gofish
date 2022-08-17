@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/fishworks/gofish"
+	"github.com/afeldman/gofish"
 	"github.com/spf13/cobra"
 )
 

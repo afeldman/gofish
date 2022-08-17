@@ -3,8 +3,8 @@ package main
 import (
 	"time"
 
-	"github.com/fishworks/gofish/pkg/ohai"
-	"github.com/fishworks/gofish/pkg/rig/installer"
+	"github.com/afeldman/gofish/pkg/ahoi"
+	"github.com/afeldman/gofish/pkg/rig/installer"
 	"github.com/spf13/cobra"
 )
 
@@ -28,7 +28,7 @@ func newRigAddCmd() *cobra.Command {
 				return err
 			}
 			t := time.Now()
-			ohai.Successf("rig constructed in %s\n", t.Sub(start).String())
+			ahoi.Successf("rig constructed in %s\n", t.Sub(start).String())
 			return nil
 		},
 	}

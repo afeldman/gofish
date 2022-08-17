@@ -17,10 +17,10 @@ import (
 	"github.com/mholt/archiver/v3"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/fishworks/gofish/pkg/home"
-	"github.com/fishworks/gofish/pkg/osutil"
-	"github.com/fishworks/gofish/receipt"
-	"github.com/fishworks/gofish/version"
+	"github.com/afeldman/gofish/pkg/home"
+	"github.com/afeldman/gofish/pkg/osutil"
+	"github.com/afeldman/gofish/receipt"
+	"github.com/afeldman/gofish/version"
 )
 
 // Food provides metadata to install a piece of software.

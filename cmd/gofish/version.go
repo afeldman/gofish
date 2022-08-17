@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/fishworks/gofish/version"
+	"github.com/afeldman/gofish/version"
 	"github.com/spf13/cobra"
 )
 

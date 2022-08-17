@@ -7,7 +7,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/fishworks/gofish/pkg/home"
+	"github.com/afeldman/gofish/pkg/home"
 )
 
 func TestTankFill(t *testing.T) {

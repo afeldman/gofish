@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/fishworks/gofish/pkg/home"
-	"github.com/fishworks/gofish/pkg/ohai"
+	"github.com/afeldman/gofish/pkg/ahoi"
+	"github.com/afeldman/gofish/pkg/home"
 	"github.com/spf13/cobra"
 )
 
@@ -34,10 +34,10 @@ func newRigRemoveCmd() *cobra.Command {
 			t := time.Now()
 			for rig, found := range foundRigs {
 				if !found {
-					ohai.Warningf("rig '%s' was not found in the rig list\n", rig)
+					ahoi.Warningf("rig '%s' was not found in the rig list\n", rig)
 				}
 			}
-			ohai.Successf("rigs uninstalled in %s\n", t.Sub(start).String())
+			ahoi.Successf("rigs uninstalled in %s\n", t.Sub(start).String())
 			return nil
 		},
 	}

@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/Masterminds/semver"
-	"github.com/fishworks/gofish/pkg/ohai"
+	"github.com/afeldman/gofish/pkg/ahoi"
 	"github.com/spf13/cobra"
 )
 
@@ -28,14 +28,14 @@ func newUpgradeCmd() *cobra.Command {
 			for _, name := range foodNames {
 				installedVersions := findFoodVersions(name)
 				if len(installedVersions) == 0 {
-					ohai.Ohaif("%s: no installed versions to upgrade\n", name)
+					ahoi.Ahoif("%s: no installed versions to upgrade\n", name)
 					continue
 				}
 				vs := make(semver.Collection, len(installedVersions))
 				for i, r := range installedVersions {
 					v, err := semver.NewVersion(r)
 					if err != nil {
-						ohai.Ohaif("Upgrading %s...\n", name)
+						ahoi.Ahoif("Upgrading %s...\n", name)
 						return fmt.Errorf("Error parsing version: %v", err)
 					}
 					vs[i] = v
@@ -51,16 +51,16 @@ func newUpgradeCmd() *cobra.Command {
 					continue
 				}
 				nothingUpgraded = false
-				ohai.Ohaif("Upgrading %s...\n", food.Name)
+				ahoi.Ahoif("Upgrading %s...\n", food.Name)
 				start := time.Now()
 				if err := food.Install(); err != nil {
 					return err
 				}
 				t := time.Now()
-				ohai.Successf("%s %s: upgraded in %s\n", food.Name, food.Version, t.Sub(start).String())
+				ahoi.Successf("%s %s: upgraded in %s\n", food.Name, food.Version, t.Sub(start).String())
 			}
 			if nothingUpgraded {
-				ohai.Successf("Everything up to date!\n")
+				ahoi.Successf("Everything up to date!\n")
 			}
 			return nil
 		},

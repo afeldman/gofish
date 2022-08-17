@@ -6,8 +6,8 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/fishworks/gofish"
-	"github.com/fishworks/gofish/pkg/ohai"
+	"github.com/afeldman/gofish"
+	"github.com/afeldman/gofish/pkg/ahoi"
 	"github.com/spf13/cobra"
 	"github.com/yuin/gluamapper"
 	lua "github.com/yuin/gopher-lua"
@@ -37,13 +37,13 @@ func newLintCmd() *cobra.Command {
 				}
 
 				for _, err := range errs {
-					ohai.Warningln(err)
+					ahoi.Warningln(err)
 				}
 				if len(errs) != 0 {
 					return fmt.Errorf("%d errors encountered while linting %s", len(errs), food.Name)
 				}
 
-				ohai.Successf("No errors discovered in '%v'\n", food.Name)
+				ahoi.Successf("No errors discovered in '%v'\n", food.Name)
 			}
 			return nil
 		},

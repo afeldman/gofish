@@ -11,10 +11,10 @@ import (
 	"strings"
 	"time"
 
+	"github.com/afeldman/gofish"
 	"github.com/afeldman/gofish/pkg/ahoi"
 	"github.com/afeldman/gofish/pkg/home"
 	"github.com/afeldman/gofish/receipt"
-	"github.com/afeldmann/gofish"
 	"github.com/spf13/cobra"
 	"github.com/yuin/gluamapper"
 	lua "github.com/yuin/gopher-lua"
@@ -56,10 +56,10 @@ func newInstallCmd() *cobra.Command {
 					return err
 				}
 				if len(findFoodVersions(fishFood)) > 0 {
-					ahoi.Ohaif("%s is already installed. Please use `gofish upgrade %s` to upgrade.\n", fishFood, fishFood)
+					ahoi.Ahoif("%s is already installed. Please use `gofish upgrade %s` to upgrade.\n", fishFood, fishFood)
 					return nil
 				}
-				ahoi.Ohaif("Installing %s...\n", fishFood)
+				ahoi.Ahoif("Installing %s...\n", fishFood)
 				start := time.Now()
 				if err := food.Install(); err != nil {
 					if errors.Is(err, gofish.ErrCouldNotUnlink{}) {

@@ -7,18 +7,18 @@ import (
 )
 
 // Ohai displays an informative message.
-func Ohai(a ...interface{}) (int, error) {
-	return Ohaif("%s", a...)
+func Ahoi(a ...interface{}) (int, error) {
+	return Ahoif("%s", a...)
 }
 
 // Ohaif displays an informative message.
-func Ohaif(format string, a ...interface{}) (int, error) {
+func Ahoif(format string, a ...interface{}) (int, error) {
 	return fmt.Printf(fmt.Sprintf("==> %s", format), a...)
 }
 
 // Ohailn displays an informative message.
-func Ohailn(a ...interface{}) (int, error) {
-	return Ohaif("%s\n", a...)
+func Ahoiln(a ...interface{}) (int, error) {
+	return Ahoif("%s\n", a...)
 }
 
 // Success displays a success message.

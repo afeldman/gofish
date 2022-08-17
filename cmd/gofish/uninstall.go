@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/fishworks/gofish/pkg/ohai"
+	"github.com/afeldman/gofish/pkg/ahoi"
 	"github.com/spf13/cobra"
 )
 
@@ -40,13 +40,13 @@ func newUninstallCmd() *cobra.Command {
 				if err != nil {
 					return err
 				}
-				ohai.Ohaif("Uninstalling %s...\n", fishFood)
+				ahoi.Ahoif("Uninstalling %s...\n", fishFood)
 				start := time.Now()
 				if err := food.Uninstall(); err != nil {
 					return err
 				}
 				t := time.Now()
-				ohai.Successf("%s %s: uninstalled in %s\n", food.Name, food.Version, t.Sub(start).String())
+				ahoi.Successf("%s %s: uninstalled in %s\n", food.Name, food.Version, t.Sub(start).String())
 			}
 			return nil
 		},
