@@ -1,8 +1,6 @@
-package main
+package cmd
 
 import (
-	"os"
-
 	"github.com/afeldman/gofish/pkg/logger"
 	"github.com/spf13/cobra"
 )
@@ -16,7 +14,7 @@ var (
 var globalUsage = `The package manager.
 `
 
-func newRootCmd() *cobra.Command {
+func NewRootCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:          "gofish",
 		Short:        globalUsage,
@@ -57,11 +55,4 @@ func newRootCmd() *cobra.Command {
 	)
 
 	return cmd
-}
-
-func main() {
-	rootCmd = newRootCmd()
-	if err := rootCmd.Execute(); err != nil {
-		os.Exit(1)
-	}
 }

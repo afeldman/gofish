@@ -1,7 +1,7 @@
-package main
+package cmd
 
 import (
-	"github.com/afeldman/gofish"
+	"github.com/afeldman/gofish/gofish"
 	"github.com/spf13/cobra"
 )
 
