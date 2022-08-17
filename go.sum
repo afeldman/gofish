@@ -4,8 +4,8 @@ github.com/Masterminds/semver v1.5.0 h1:H65muMkzWKEuNDnfl9d70GUjFniHKHRbFPGBuZ3Q
 github.com/Masterminds/semver v1.5.0/go.mod h1:MB6lktGJrhw8PrUyiEoblNEGEQ+RzHPF078ddwwvV3Y=
 github.com/Masterminds/vcs v1.13.3 h1:IIA2aBdXvfbIM+yl/eTnL4hb1XwdpvuQLglAix1gweE=
 github.com/Masterminds/vcs v1.13.3/go.mod h1:TiE7xuEjl1N4j016moRd6vezp6e6Lz23gypeXfzXeW8=
-github.com/afeldman/go-util v0.2.2 h1:6hxcT2JCnrLOkrMd/Duvy0f0GDIS4muSqMech4hrW+w=
-github.com/afeldman/go-util v0.2.2/go.mod h1:FhqiIY6nrBex7dTzytJxMUlcFf9nVPoUDQtLptKO/uI=
+github.com/afeldman/go-util v0.2.3 h1:WJf0USKKxcNFf4RAonvrfyuwdeKG8LM6GMXH95l50Dw=
+github.com/afeldman/go-util v0.2.3/go.mod h1:FhqiIY6nrBex7dTzytJxMUlcFf9nVPoUDQtLptKO/uI=
 github.com/andybalholm/brotli v1.0.1 h1:KqhlKozYbRtJvsPrrEeXcO+N2l6NYT5A2QAFmSULpEc=
 github.com/andybalholm/brotli v1.0.1/go.mod h1:loMXtMfwqflxFJPmdbJO0a3KNoPuLBgiu3qAvBg8x/Y=
 github.com/bacongobbler/browser v1.1.0 h1:6YTctUlzcApit1vpWgh+myjh8lQUyQRD2Ltoyvy2EoM=
