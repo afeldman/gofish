@@ -3,13 +3,13 @@ package main
 import (
 	"os"
 
-	log "github.com/sirupsen/logrus"
+	"github.com/afeldman/gofish/pkg/logger"
 	"github.com/spf13/cobra"
 )
 
 var (
 	// logLevel is a value to indicate how verbose the user would like the logs to be.
-	logLevel int
+	logLevel string
 	rootCmd  *cobra.Command
 )
 
@@ -23,11 +23,14 @@ func newRootCmd() *cobra.Command {
 		Long:         globalUsage,
 		SilenceUsage: true,
 		PersistentPreRun: func(cmd *cobra.Command, args []string) {
-			log.SetLevel(log.Level(logLevel))
+			if err := logger.Init(logLevel, "./gofish.log", false); err != nil {
+				return
+			}
+
 		},
 	}
 	p := cmd.PersistentFlags()
-	p.IntVar(&logLevel, "log-level", int(log.PanicLevel), "log level")
+	p.StringVar(&logLevel, "log-level", "info", "log level")
 
 	cmd.AddCommand(
 		newCleanupCmd(),
