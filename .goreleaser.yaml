@@ -40,7 +40,7 @@ brews:
       owner: afeldman
       name: homebrew-tap
       token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
-    folder: Formula
+    directory: Formula
     homepage: "https://github.com/afeldman/gofish"
     description: "Cross-platform package manager (GoFish fork)"
     license: "Apache-2.0"
