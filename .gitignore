@@ -5,3 +5,5 @@ _dist
 dist/
 
 .vscode/
+
+.DS_Store
