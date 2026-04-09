@@ -12,6 +12,7 @@ builds:
     goos:
       - linux
       - darwin
+      - windows
     goarch:
       - amd64
       - arm64
@@ -34,17 +35,15 @@ changelog:
       - "^test:"
       - "^chore:"
 
-brews:
+homebrew_casks:
   - name: gofish
     repository:
       owner: afeldman
       name: homebrew-tap
       token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
-    directory: Formula
+    directory: Casks
     homepage: "https://github.com/afeldman/gofish"
     description: "Cross-platform package manager (GoFish fork)"
     license: "Apache-2.0"
-    install: |
-      bin.install "gofish"
-    test: |
-      system "#{bin}/gofish", "version"
+    binaries:
+      - gofish
