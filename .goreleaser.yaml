@@ -34,7 +34,11 @@ changelog:
       - "^test:"
       - "^chore:"
 
-brews:
+after:
+  hooks:
+    - gotofish gen --release {{ .ProjectName }} --desc "Cross-platform package manager (GoFish fork)"
+
+homebrew_casks:
   - name: gofish
     repository:
       owner: afeldman
